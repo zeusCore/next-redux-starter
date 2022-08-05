@@ -1,17 +1,23 @@
 {
-  "name": "recoil-m-leak",
+  "name": "next-redux-starter",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "cross-env NODE_OPTIONS=--inspect next dev --port=3007",
     "build": "next build",
-    "start": "next start",
+    "start": "next start --port=3007",
+    "ipr": "cross-env NODE_OPTIONS=--inspect next start --port=3007",
     "lint": "next lint"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.8.3",
+    "cross-env": "^7.0.3",
     "next": "12.2.3",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-redux": "^8.0.2",
+    "recoil": "0.5.2",
+    "redux": "^4.2.0"
   },
   "devDependencies": {
     "@types/node": "18.6.4",
