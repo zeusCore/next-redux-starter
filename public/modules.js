@@ -2546,7 +2546,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* eslint-disable import/no-anonymous-default-export */
 
+// import CHeader from "./pages/components/Header";
 var axios = axios__WEBPACK_IMPORTED_MODULE_0__;
+// export const Header = CHeader;
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({ axios: axios__WEBPACK_IMPORTED_MODULE_0__ });
 
 })();

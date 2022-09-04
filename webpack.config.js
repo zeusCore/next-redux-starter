@@ -15,10 +15,7 @@ module.exports = {
     library: "modules",
     libraryTarget: "this",
   },
-  externals: {
-    react: "React",
-    "react-dom": "ReactDOM",
-  },
+  externals: {},
   module: {
     rules: [
       {
