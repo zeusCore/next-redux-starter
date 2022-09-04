@@ -3,6 +3,7 @@ const withCSS = require("./build-tools/next-css");
 const withLess = require("./build-tools/next-less");
 const hasha = require("hasha");
 const path = require("path");
+const webpack = require("webpack");
 
 const LessPluginFunctions = require("less-plugin-functions");
 const withTM = require("next-transpile-modules")(["antd"]);
@@ -51,7 +52,7 @@ const config = {
       plugins: [new LessPluginFunctions({ alwaysOverride: true })],
     },
   },
-  webpack(config) {
+  webpack(config, { isServer }) {
     config.resolve.alias.react = path.resolve(
       __dirname,
       "./node_modules/react"
@@ -77,7 +78,18 @@ const config = {
         },
       }
     );
-
+    if (!isServer)
+      config.plugins.push(
+        new webpack.IgnorePlugin({
+          checkResource(resource) {
+            if (resource.includes("axios")) {
+              console.log(resource);
+              return true;
+            }
+            return false;
+          },
+        })
+      );
     return config;
   },
 };

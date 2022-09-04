@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "wp-w": "webpack -w",
+    "wp-p": "webpack",
     "dev": "cross-env NODE_OPTIONS=--inspect next dev --port=3007",
     "build": "next build",
     "start": "next start --port=3007",
@@ -39,6 +41,8 @@
     "recoil": "0.5.2",
     "redux": "^4.2.0",
     "style-resources-loader": "^1.5.0",
+    "ts-loader": "^9.3.1",
+    "webpack": "^5.74.0",
     "yup": "^0.32.11"
   },
   "devDependencies": {
@@ -47,6 +51,7 @@
     "@types/react-dom": "18.0.6",
     "eslint": "8.21.0",
     "eslint-config-next": "12.2.4",
-    "typescript": "4.7.4"
+    "typescript": "4.7.4",
+    "webpack-cli": "^4.10.0"
   }
 }

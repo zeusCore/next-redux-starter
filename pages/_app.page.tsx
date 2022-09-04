@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-sync-scripts */
 import "../styles/globals.css";
 import type { AppContext, AppProps } from "next/app";
 import { Provider } from "react-redux";
@@ -13,6 +14,7 @@ const MyApp: any = (props: any) => {
   return (
     <Provider store={store}>
       <Header />
+      <script src="/modules.js" ></script>
       <Component {...pageProps} />
     </Provider>
   );

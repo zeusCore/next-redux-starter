@@ -1,4 +1,10 @@
-import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+import type Axios from "axios";
+import type { AxiosRequestConfig, AxiosResponse } from "axios";
+
+let axios: typeof Axios;
+if (typeof window === "undefined") axios = require("axios").default;
+else axios = window["modules"].axios;
+
 import { REQUEST_FAILED_MESSAGE } from "common/constants/error";
 
 const fetch = axios.create({
